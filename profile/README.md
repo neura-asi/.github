@@ -1,5 +1,5 @@
 ## NEURA
-> orchestrates multiple independent AI models into a controlled reasoning pipeline that generates hypotheses gathers real world evidence from tools and memory graphs detects contradictions scores competing claims and deterministically resolves them into the most defensible conclusion before returning an answer
+> orchestrates multiple independent AI models into a controlled reasoning pipeline that generates hypotheses gathers real world evidence from tools and memory graphs detects contradictions scores competing claims and deterministically resolves them into the most defensible conclusion before returning an answer. With self improvement.
 
 `question` **→** `multiple models` **→** `tools` **+** `memory` **→** `arbitration` **→** `answer`
 
