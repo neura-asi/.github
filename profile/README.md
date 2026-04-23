@@ -1,20 +1,4 @@
 ## NEURA
-> orchestrates multiple independent AI models into a controlled reasoning pipeline that generates hypotheses gathers real world evidence from tools and memory graphs detects contradictions scores competing claims and deterministically resolves them into the most defensible conclusion before returning an answer. With self improvement.
+> Policy driven AI middleware and agent system with deterministic routing structured tool orchestration SPO based fact extraction crosssource conflict detection agreement scoring bounded reconciliation loops memory guided strategy bias and execution aware planning transforming LLM outputs into a controlled self correcting verifiable reasoning and decision engine across dynamic real world tasks
 
-`question` **→** `multiple models` **→** `tools` **+** `memory` **→** `arbitration` **→** `answer`
-
-### Task Flow
-```
-(input task)
-→ structured plan graph
-→ step execution (per node)
-→ multi-model reasoning (per step)
-→ tools (build, logs, code, web)
-+ memory (past fixes, patterns)
-→ claim extraction (what’s wrong / what to change)
-→ evidence gathering (tool outputs + memory)
-→ truth arbitration (pick most likely fix)
-→ action (apply change in sandbox)
-→ validation (rebuild / tests)
-→ final result
-```
+`user query` **→** `policy decision engine` **→** `tool routing` **→** `multi-source orchestration` **→** `structured extraction (SPO + numerics + entities)` **→** `conflict detection (numeric + semantic)` **→** `evaluation + reconciliation controller` **→** `memory guided synthesis` **→** `final answer`
