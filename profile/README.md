@@ -5,3 +5,26 @@
 
 
 # [PAPER.md](https://github.com/neura-asi/.github/blob/main/profile/PAPER.md)
+
+
+```  The architecture, mapped to concrete components
+
+  gpt-oss-20b (patched llama-server, n-cpu-moe)   companion 1.5B (jlens, PyTorch)
+          │ residual @ layer L (real)                    │ residual @ layer L
+          ▼                                              ▼
+    in-engine LOGIT LENS  ──────────┐         JACOBIAN LENS (future dir)
+    (current belief, entropy)       │                    │
+                                    ▼                    ▼
+                          ┌──────  STATE ESTIMATOR (cogstate.py)  ──────┐
+                          │  EMA/Kalman-lite smoothing over layers      │
+                          └──────────────────┬──────────────────────────┘
+                                             ▼
+                              TRAJECTORY ANALYSIS
+               entropy · layer-agreement(KL) · convergence · hypothesis tracks ·
+                          current-vs-future divergence (uncertainty)
+                                             ▼
+                LIVE UI (dashboard)      +      ADAPTIVE ORCHESTRATION
+          token-by-token cognition panel     (soft triggers: verify / retrieve /
+                                              tool / early-stop — opt-in, gated)
+
+```
