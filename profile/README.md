@@ -3,6 +3,34 @@
 
 `user query` **→** `policy decision engine` **→** `tool routing` **→** `multi-source orchestration` **→** `structured extraction (SPO + numerics + entities)` **→** `conflict detection (numeric + semantic)` **→** `evaluation + reconciliation controller` **→** `memory guided synthesis` **→** `final answer`
 
+| Feature                                  | Traditional RAG + Embeddings   | Claude Code (Opus 4.8)                      | **Neura v0.14**                                                            |
+| ---------------------------------------- | ------------------------------ | ------------------------------------------- | -------------------------------------------------------------------------- |
+| 🧠 **Long-term memory**                  | ❌ Usually external vector DB   | ⚠️ Limited product memory + session context | ✅ Persistent semantic memory graph                                         |
+| 📂 **Repository understanding**          | 📄 Stores code chunks          | 📖 Reads repository when needed             |  Builds an architectural understanding of the repository                |
+| 🔍 **Retrieval**                         | Embedding similarity           | Context + search + tools                    | Concept-first retrieval + graph expansion + embeddings                     |
+| 🕸️ **Knowledge structure**              | Independent chunks             | Mostly implicit inside model context        | Typed knowledge graph (Supports, DependsOn, PartOf, etc.)                  |
+| 📈 **Relationships**                     | Similarity only                | Inferred during reasoning                   | Explicit, persistent semantic relationships                                |
+| 🧩 **Architecture awareness**            | Low                            | High during current session                 | Persistent architectural model                                             |
+| 📚 **Engineering history**               | None                           | Conversation history                        | Decisions, evidence, verification, evolution history                       |
+| 🧪 **Impact analysis**                   | None                           | Model estimates likely impact               | Graph-based dependency analysis with uncertainty estimates                 |
+| 🎯 **Planning**                          | Prompt-based                   | Strong session planning                     | Persistent engineering plans connected to knowledge graph                  |
+| 🔧 **Tool integration**                  | Usually external orchestration | Excellent integrated tool use               | Tools operate through semantic knowledge and feed back into it             |
+| ✅ **Verification**                       | User initiated                 | Can run builds/tests                        | Verification becomes permanent engineering evidence                        |
+| 📖 **Explainability**                    | Retrieved chunks               | Natural-language explanation                | Graph path + evidence chain + confidence + reasoning trace                 |
+| 🔄 **Learning after execution**          | Usually none                   | Mostly session-local                        | Reflections become evidence that improves future reasoning                 |
+| 💤 **Offline maintenance**               | None                           | None                                        | Sleep consolidates concepts, refreshes embeddings, updates confidence      |
+| 🌳 **Knowledge evolution**               | Static until re-indexed        | Rebuild context next session                | Continuously evolves as repositories and projects change                   |
+| 📊 **Confidence model**                  | Retrieval score                | Model confidence (implicit)                 | Evidence-backed confidence for concepts and relationships                  |
+| 🏛️ **Architectural decisions**          | None                           | Conversation only                           | First-class persistent engineering decisions                               |
+| 📦 **Multiple repositories**             | Separate indexes               | Open multiple projects                      | Unified semantic graph spanning repositories                               |
+| 🔄 **Repository updates**                | Re-index changed files         | Reads changed files                         | Incremental concept refresh with graph updates                             |
+| 🤝 **Cross-source reasoning**            | Difficult                      | Possible via prompt                         | Native across repositories, docs, conversations, evidence, and history     |
+| 📜 **Engineering evidence**              | None                           | Conversation artifacts                      | Append-only evidence ledger with validation and reflection                 |
+| 🎯 **Prediction**                        | None                           | Can estimate during reasoning               | Predicts impact, compares with reality, calibrates over time               |
+| ❤️ **Project understanding over months** | Minimal                        | Depends on available context                | Designed to continuously improve as the project evolves                    |
+| 🧭 **Primary philosophy**                | "Find relevant text."          | "Read, reason, and use tools."              | "Continuously build and refine an internal understanding of the software." |
+
+
 
 # [PAPER.md](https://github.com/neura-asi/.github/blob/main/profile/PAPER.md)
 
